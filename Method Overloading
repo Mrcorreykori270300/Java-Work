@@ -1,0 +1,30 @@
+package Demo;
+
+class calculator {
+	
+	public int Test (int a , int b , int c)
+	{
+		int Total = a + b + c;
+		return Total;
+	}
+	public int Test (int a , int b)
+	{
+		int Total =  a + b;
+		return Total;
+	}
+}
+
+public class Method_overflow {
+
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+		int c = 30;
+		calculator calc = new calculator();
+		int res1 =  calc.Test(a, b, c);
+		int res2 = calc.Test(a, b);
+		System.out.println(res1);
+		System.out.println(res2);
+	}
+
+}
