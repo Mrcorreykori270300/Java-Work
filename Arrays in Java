@@ -54,6 +54,7 @@ public class arrays {
 //		{
 //			b[i] = a[i];
 ////			System.out.println(b[i]);
+				OR
 //			int d[] = a.clone();
 //			System.out.println(d[i]);
 //		}
