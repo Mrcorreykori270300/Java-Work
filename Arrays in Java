@@ -1,29 +1,66 @@
-Arrays is index band Ds to store large amount of Homogenous Data 
-Array is treated as object
-There are 1D, 2D,3D, etc arrays 
+package arrays;
 
-We can initialize arrays in java in two different ways
- int []  myArray =  new myArray[5];
-myArray[0] = 10;
-myArray[1] = 20;
-myArray[2] = 30;
-myArray[3] =40;
-myArray[4]=50;
+import java.util.Scanner;
+//******************* 1 Dimensional array***********************// 
+public class arrays {
 
-or
+	public static void main(String[] args) {
+		
+//		int a[] = new int[5];
+//		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		for (int i=0 ; i< a.length ; i++)
+//		{
+//			System.out.println("Please enter the marks of student " + i );
+//			a[i] = sc.nextInt();
+//			
+//		}
+//		System.out.println(" the marks of Students is as follows");
+//		for (int i=0 ; i< a.length ; i++)
+//		{
+//			System.out.print(a[i] + " ");
+//		}
+		
+		//************ one Dimensional Array******************//
+//		int a[] = new int [5];
+//		a[0] = 10;
+//		a[1] = 20;
+//		a[2] = 10;
+//		a[3] = 14;
+//		a[4] = 15;
+//		System.out.println(a.length);
+//		for (int x : a)
+//		{
+//			System.out.println(x);
+//		}
+		//***************Two Dimensional Array*****************//
+		int a[ ][ ]  = new int [3][4];
+		a[0][1]= 10;
+		for(int i=0 ; i<a.length ; i++)
+		{
+			for (int j =0 ; j<a.length ; j++)
+			{
+				System.out.println(a[i][j]);
+			}
+			
+		}
+		
 
-int myArray[ ]  = {10,20,30,40,50};
+		//**************************************************************
+//		int a[ ]   = {10,20,30,40,50,60,};
+//		int b[ ] = new int [a.length];
+//		for (int i =0 ; i<a.length ;  i++)
+//		{
+//			b[i] = a[i];
+////			System.out.println(b[i]);
+//			int d[] = a.clone();
+//			System.out.println(d[i]);
+//		}
+//		for(int c : b)
+//		{
+//			System.out.println(c);
+//		}
+	}
 
-//********************Copy one array to another**********************//
-int a[ ]   = {10,20,30,40,50,60,};
-int b[ ] = new int [a.length];
-for (int i =0 ; i<a.length ;  i++)
-{
-	b[i] = a[i];
 }
-for(int c : b)
-{
-	System.out.println(c)
-}
-
- 
