@@ -27,7 +27,7 @@ StringBuffer sb = new StringBuffer("sachin");         //here the capacity will b
 System.out.println(sb.capacity());                    // 16 +  6 = 22
 System.out.println(sb.length());                     // 6
 
-
+//*********************************************************Programs*********************************************************//
 
 //Wap to convert india To INDIA
 
@@ -44,7 +44,7 @@ class Demo
 		   System.out.println(s4);
      }
 }
-
+//****************************************************************************************************//
 		 // Wap to Convert GlObaL To GLOBAL
 		 
 		 String s5 = "GlObaL";
@@ -61,3 +61,22 @@ class Demo
 			 } 
 		 }
 		 System.out.println(s6);
+//****************************************************************************************************//
+		 
+		  //Wap to convert GLobaL To glOBAl
+		 
+		 String s7 = "GLobaL";
+		 String s8 = "";
+		 for(int i = 0  ;  i<s7.length(); i++)
+		 {
+			 if(s7.charAt(i) >= 'a' && s7.charAt(i) < 'z')
+			 {
+				 s8 = s8 + (char)(s7.charAt(i)-32);
+			 }
+			 else
+			 {
+				 s8 = s8 + (char)(s7.charAt(i)+32);
+			 }
+		 }
+		 System.out.println(s7);
+		 System.out.println(s8);
