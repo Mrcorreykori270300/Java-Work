@@ -1,0 +1,46 @@
+class Test{
+  public static void main(String[] args)
+    {
+      final StringBuffer sb=new StringBuffer("sachin");
+      sb.append("IND");
+      System.out.println(sb);    //sachinIND (it will run)     
+      sb=new StringBuffer("tendulkar");                   //Compiler time error becasue of final Keyword
+      System.out.println(sb);
+   }
+}
+
+//If the variable is of primitive type and if it is final then the value of the variable should not be changed,if we try to change it would result in "CompileTimeError".
+//If the variable if of reference type and if it is of mutable nature then as per its mutable nature the object data can be changed,it would not result in "CompileTimeError",
+//but if we try to reassign the reference variable with a new object addressthen it would result in "CompileTimeError".
+
+StringBuffer sb = new StringBuffer();
+System.out.println(sb.capacity());      //16 (Default Capacity)
+sb.append("abcdefghijklmnop");
+System.out.println(sb.capacity());     //16  
+sb.append("q");
+System.out.println(sb.capacity());    // (16+1) * 2
+sb.append("rstuvwxyz");
+System.out.println(sb.capacity());   // 34
+
+
+StringBuffer sb = new StringBuffer("sachin");         //here the capacity will be (length of String + 16)
+System.out.println(sb.capacity());                    // 16 +  6 = 22
+System.out.println(sb.length());                     // 6
+
+
+
+//Wap to convert india To INDIA
+
+class Demo
+{
+    public static void main (string[]args)
+    {
+      String s3 = "india";
+		  String s4 = "";
+		  for(int i=0 ; i< s3.length() ; i++)
+		  {
+		  	 s4 = s4 + (char) (s3.charAt(i) -32) ; 
+		  }
+		   System.out.println(s4);
+     }
+}
