@@ -1,0 +1,79 @@
+//*******************************************BASIC EXAMPLE************************************//
+class Alien{
+	private int age;
+	String name;
+	
+	public void setAge(int x)
+	{
+		if(x>0)
+		{
+		age = x;
+		}
+		else 
+		{
+			System.out.println("Invalid age given");
+		}
+	}
+	public void setName (String X)
+	{
+		name =  X ;
+	}
+	public int getAge()
+	{
+		return age;
+	}
+	public String getName()
+	{
+		return name;
+	}
+}
+public class ExamplsEncap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Alien An =  new Alien();
+		An.setAge(22);
+		An.setName("Prashant");
+		System.out.println(An.getAge());
+		System.out.println(An.getName());
+	}
+
+}
+
+//***************************************** USED THIS KEYWORD************************************//
+
+//Private , This keywords , setUs and getUs methods
+class Fan
+{
+	private int Cost;
+	private String Brand;
+//***************Setter Methods*******************//	
+	public void setCost(int Cost)
+	{
+		this.Cost = Cost; // used this keyword to avoid naming conflict between instance var and local var
+	}
+	public void setBrand (String Brand)
+	{
+		this.Brand = Brand;
+	}
+//****************Gettor Methods******************//
+	public int getCost()
+	{
+		return Cost;
+	}
+	public String getBrand()
+	{
+		return Brand;
+	}
+}
+public class ExamplTwoEncaps {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fan F1 =  new Fan();
+		F1.setCost(100);
+		F1.setBrand("Bajaj");
+		System.out.println(F1.getCost());
+		System.out.println(F1.getBrand());
+	}
+}
