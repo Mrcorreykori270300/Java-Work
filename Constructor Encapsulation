@@ -1,0 +1,124 @@
+class AlienDemo
+{
+	private int age;
+	private String name;
+	
+	//Instead of writing seperate Set us for all properties we use constructor
+	
+	public AlienDemo(int age , String name)
+	{
+		this.age = age;
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+}
+public class Constructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AlienDemo AL =  new AlienDemo(22 , "Prashant");
+		System.out.println(AL.getAge());
+		System.out.println(AL.getName());
+		
+	}
+
+}
+//*****************************************************************************************************************************************//
+class Test
+{
+	private int age;
+	private String name;
+	//***********Constructor overloading
+	public Test()
+	{
+		age = 23; //no need to use this because there is no local variable
+		name = "Prashant";
+		
+	}
+	public Test (int age, String name)
+	{
+		this.age =age;
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	
+}
+public class Constructor_Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Test T = new Test(22,"kori");
+		System.out.println(T.getAge());
+		System.out.println(T.getName());
+		
+		Test T2 = new Test();
+		System.out.println(T2.getAge());
+		System.out.println(T2.getName());
+	}
+
+}
+
+
+//**********************************************************************************************************************************//
+
+
+class Test2
+{
+	private int age;
+	private String name;
+	//Constructor
+	public Test2()
+	{
+		this(22,"prashant");
+	}
+	public Test2(int age ,String name)
+	{
+		this.age= age;
+		this.name =name;
+	}
+	public Test2(int age)
+	{
+		this();
+		this.age= age;
+	}
+	// constructor overloading
+	public int getAge()
+	{
+		return age;
+	}
+	public String getName()
+	{
+		return name;
+	}
+}
+public class Constructor_exmple2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test2 t1 =  new Test2 ();
+		
+		System.out.println(t1.getName());
+		System.out.println(t1.getAge());
+		
+		Test2 t2 = new Test2(22);
+		
+		System.out.println(t2.getAge());
+		System.out.println(t2.getName());		
+	}
+
+}
