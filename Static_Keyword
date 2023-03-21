@@ -1,0 +1,130 @@
+
+public class Launch1 {
+	// Static variables
+	static int a,b,c;
+	
+	// Static Block
+	static
+	{
+		System.out.println("Static Block");
+		a=10;
+		b=20;
+		c=30;
+	}
+	static void disp()
+	{
+		System.out.println("Static Method");
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Main Method");
+		disp();
+	}
+
+}
+//************************************************************************//
+
+
+public class Launch_2 {
+	// Static Vaiable
+	static int a,b,c;
+	//static block
+	static
+	{
+		System.out.println("Static Block");
+		a=10;
+		b=20;
+		c=30;
+		
+	}
+	// static method
+	static void disp1()
+	{
+		System.out.println("Static Method");
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+	}
+	 //non- static variable i.e normal variable
+	int m,n,o;
+	
+	//non- static block
+	{
+		System.out.println("Non-static Block");
+		m=40;
+		n=50;
+		o=60;
+		a=70;
+		b=80;
+		c=90;
+	}
+	Launch_2()
+	{
+		System.out.println("Constructor");
+	}
+	//non-static method
+	void disp2()
+	{
+		System.out.println("non-static Method");
+		System.out.println(m);
+		System.out.println(n);
+		System.out.println(o);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main method");
+		disp1();
+//		disp2();  this is non-static so we cannot call this w/o creating object
+		Launch_2 L = new Launch_2();
+		L.disp2();
+	}
+
+}
+//*****************************************************************************************//
+
+class Alien
+{
+	int age;
+	String name;
+	
+	static int count;
+	
+	{
+		count++;
+	}
+	
+	Alien()
+	{
+		
+	}
+	Alien(int age)
+	{
+		this.age = age;
+		
+	}
+	Alien(int age, String name)
+	{
+		this.age =age;
+		this.name =name;
+		
+	}
+}
+public class Launch_3 {
+
+	public static void main(String[] args) {
+		
+		Alien A1 = new Alien();
+		Alien A2 = new Alien(22);
+		Alien A3 = new Alien(22 ,"Prashant");  
+		//*******************************************//
+		System.out.println(A1.count);
+	}
+}
