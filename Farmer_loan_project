@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class former
+{
+	private float pa;
+	private float td;
+	private float si;
+	static private float ri;
+	
+	static 
+	{
+		ri = 2.5f;  
+	}
+	
+	public void acceptInput()
+	{
+		Scanner Sc = new Scanner(System.in);
+		System.out.println("Kindly Enter Loan Amount");
+		pa = Sc.nextFloat();
+		System.out.println("Enter Duration");
+		td =Sc.nextFloat();
+	
+	}
+	void computee()
+	{
+		si=(pa*td*ri)/100;
+	}
+	public void disp()
+	{
+		System.out.println("si is " + si);
+	}
+}
+public class Farmer_loan {
+
+	public static void main(String[] args) {
+	
+		former F1 = new former();
+		former F2 = new former();
+		
+		F1.acceptInput();
+		F1.computee();
+		F1.disp();
+		
+		F2.acceptInput();
+		F2.computee();
+		F2.disp();
+
+	}
+
+}
