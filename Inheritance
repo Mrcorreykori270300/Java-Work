@@ -1,0 +1,61 @@
+class Plane
+{
+	public void fly()
+	{
+		System.out.println("This plane is flying");
+	}
+	public void TakeOff()
+	{
+		System.out.println("Plane is Taking off");
+	}
+}
+class cargoPlane extends Plane
+{
+	public void fly()
+	{
+		System.out.println("this plane is flying at lower height");
+	}
+	public void carryGoods()
+	{
+		System.out.println("This plane is carrying goods");
+	}
+}
+class passengerPlane extends Plane
+{
+	public void fly()
+	{
+		System.out.println("This plane is flying at high altitude");
+	}
+	public void carryPassenger()
+	{
+		System.out.println("This plane is carrying passenger");
+	}
+}
+public class upcasting_downcasting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cargoPlane cp = new cargoPlane();
+		cp.fly();
+		cp.TakeOff();
+		cp.carryGoods();
+		
+		passengerPlane pp = new passengerPlane();
+		pp.fly();
+		pp.TakeOff();
+		pp.carryPassenger();
+	 //******************Upcasting - downCasting*******************//
+                        
+                        
+                        
+                        or
+                        
+                        
+		System.out.println("**************************************************");
+		Plane pc = new cargoPlane();  // This is Upcasting
+		pc.fly();
+		pc.TakeOff();
+		((cargoPlane) pc).carryGoods();  // This is DownCasting in Inheritance
+	}
+
+}
