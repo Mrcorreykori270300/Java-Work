@@ -27,10 +27,11 @@ class SportsCar extends Car
 
 	public void Driving()
 	{
-		System.out.println("This car is being driven at top speed");
+		System.out.println("This car is being driven at top speed"); //  Deiving method is being overriden
 	}
 }
-//Method hiding
+//Method hiding 
+// Static methods will take parts in inheritance but you cannot override a static method
 class Telusko
 {
 	public static void show()
