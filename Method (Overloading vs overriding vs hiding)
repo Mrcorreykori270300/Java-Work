@@ -1,0 +1,69 @@
+class MethodOverloading
+{
+	public void disp()
+	{
+		System.out.println("Disp w/o para");
+	}
+	public void disp(String OnePara)
+	{
+		System.out.println("Disp with 1 para string");
+	}
+	public void disp(int a)
+	{
+		System.out.println("Disp with 1 para int");
+	}
+	// Different methods with same name but different parameter
+}
+//Method Overriding 
+class Car
+{
+	private void Driving()
+	{
+		System.out.println("This car is being Driven");
+	}
+}
+class SportsCar extends Car
+{
+
+	public void Driving()
+	{
+		System.out.println("This car is being driven at top speed");
+	}
+}
+//Method hiding
+class Telusko
+{
+	public static void show()
+	{
+		System.out.println("This is Super Class");
+	}
+}
+class Alien extends Telusko
+{
+	public static void show()
+	{
+		System.out.println("This is Sub class to change parent method");
+	}
+}
+public class Methods_Overloading_overriding_Hiding {
+
+	public static void main(String[] args) {
+		// Method Overloading
+		MethodOverloading mo =  new MethodOverloading();
+		mo.disp();
+		mo.disp(5);
+		mo.disp("Test Para");
+		// Method overriding
+		System.out.println("----------------------------------------------------");
+		SportsCar sp = new SportsCar();
+		sp.Driving();
+		System.out.println("----------------------------------------------------");
+		// Method Hiding
+		Alien A = new Alien();
+		A.show();
+		Telusko a = new Alien();
+		a.show();
+
+	}
+
+}
