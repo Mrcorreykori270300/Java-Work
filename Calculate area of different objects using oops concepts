@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+
+
+abstract class Shapes
+{
+	float area;
+	abstract void input();
+	abstract void compute();
+	public void disp()
+	{
+		System.out.println("Area is :: " + area);
+	}
+}
+class Rect1 extends Shapes
+{
+	float len;
+	float brd;
+	public void input()
+	{
+		System.out.println("Enter the value of Length");
+		Scanner sc = new Scanner(System.in);
+		len = sc.nextFloat();
+		
+		System.out.println("Enter the value of Breadth");
+		brd = sc.nextFloat();
+	}
+	public void compute()
+	{
+		area = len * brd;
+	}
+}
+class Square1 extends Shapes
+{
+	float len;
+
+	public void input()
+	{
+		System.out.println("Enter the value of Length");
+		Scanner sc = new Scanner(System.in);
+		len = sc.nextFloat();
+		
+	}
+	public void compute()
+	{
+		area = len * len;
+	}
+}
+class Circle1 extends Shapes
+{
+	float rad;
+	final float pie = 3.14f;
+	public void input()
+	{
+		System.out.println("Enter the value of Length");
+		Scanner sc = new Scanner(System.in);
+		rad = sc.nextFloat();
+		
+	}
+	public void compute()
+	{
+		area = pie * rad * rad;
+	}
+}
+class Geometry
+{
+	public void permit(Shapes S)
+	{
+		S.input();
+		S.compute();
+		S.disp();
+	}
+}
+public class now {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rect1 r = new Rect1();
+		Square1 s = new Square1();
+		Circle1 c = new Circle1();
+		
+		Geometry g = new Geometry();
+		g.permit(r);
+		g.permit(s);
+		g.permit(c);
+		
+	}
+
+}
