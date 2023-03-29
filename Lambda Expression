@@ -1,0 +1,13 @@
+@FunctionalInterface
+interface Computer  
+{
+	int add(int a , int b ,int c);
+}
+public class LambdaExpression {
+
+	public static void main(String[] args) {	
+		Computer com = (a,b,c) -> a+b+c;
+		System.out.print("Value of addition is ::");
+		System.out.println(com.add(10, 20,30));
+	}
+}
