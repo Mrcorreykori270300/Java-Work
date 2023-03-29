@@ -1,0 +1,19 @@
+@FunctionalInterface
+interface no1
+{
+	void disp();
+}
+public class AnonymousInnerClass {
+
+	public static void main(String[] args) {
+		no1 obj =  new no1()
+		{
+			public void disp()
+			{
+				System.out.println(" Implemented using anonymous class ");
+			}
+		};
+		obj.disp();
+	}
+
+}
