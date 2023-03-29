@@ -1,0 +1,32 @@
+class Demo1
+{
+	static int a;
+	static void Disp()
+	{
+		System.out.println("This is static Method");
+	}
+	static class InnerDemo
+	{
+		static int b;
+		static void show()
+		{
+			System.out.println("This is inner static method");
+		}
+	}
+}
+public class StaticInnerClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Demo1.a = 10;
+		System.out.println(Demo1.a);
+		Demo1.Disp();
+		Demo1.InnerDemo obj = new Demo1.InnerDemo();
+		obj.b = 20;
+		System.out.println(obj.b);
+		
+		obj.show();
+	}
+
+}
