@@ -1,0 +1,34 @@
+class Demo
+{
+	int a;
+	public void show()
+	{
+		System.out.println("Instance method of main class");
+	}
+	
+	class innerclass
+	{
+		int b;
+		public void disp()
+		{
+			System.out.println("This is Method of inner class");
+		}
+	}
+}
+public class Member {
+
+	public static void main(String[] args) {
+		
+		Demo d = new Demo();
+		d.a=10;
+		d.show();
+		System.out.println(d.a);
+		
+		Demo.innerclass obj = d.new innerclass();
+		obj.b = 30;
+		System.out.println(obj.b);
+		obj.disp();
+
+	}
+
+}
